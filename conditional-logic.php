@@ -21,9 +21,3 @@ include( MY_PLUGIN_PATH . 'includes/enqueue_scripts/enque_files.php');
 
 
 //
-if ( ! function_exists( 'conditional_logic_form' ) ){
-    function clf_enqueue_scripts() {
-        wp_enqueue_script('jquery');
-        wp_enqueue_script('clf-conditional-logic', plugins_url('/js/conditional-logic.js', __FILE__), array('jquery'), null, true);
-    }
-}
