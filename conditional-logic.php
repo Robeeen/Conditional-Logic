@@ -15,9 +15,8 @@ Author: Shams Khan
 //plugin Versions
 define( 'PLUGIN_NAME_VERSION', '1.0.0' );
 
-//Define
+//Define path and Enqueues files-bootstrap-js
 define( 'MY_PLUGIN_PATH', plugin_dir_path( __FILE__ ) );
 include( MY_PLUGIN_PATH . 'includes/enqueue_scripts/enque_files.php');
-
-
+include( MY_PLUGIN_PATH . 'includes/shortcodes/shortcode.php');
 //
