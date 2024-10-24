@@ -8,5 +8,12 @@ jQuery(document).ready(function($){
         "UK": ["London", "Manchaster", "Birmingham"]
     };
 
-    
+    $('#country').change(function(){
+        var selectCountry = $(this).val();
+        if(selectCountry !== ""){
+            var cityDropdown = $('$city');
+            cityDropdown.empty();
+        }
+    })
+
 })
