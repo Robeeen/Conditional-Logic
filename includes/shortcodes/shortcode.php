@@ -17,13 +17,37 @@ if( !function_exists('clf_conditional_logic_form')){
     </div>
     <div class="form-group">
         <label for="country">Select Country</label>
+            <!-- Country Dropdown -->
             <select class="form-control" id="country" name="country">
                 <option value="">--Select Country--</option>
                 <option value="USA">USA</option>
                 <option value="Canada">Canada</option>
                 <option value="UK">UK</option>
-            </select>        
+            </select>     
     </div>
+
+    
+    <div class="form-group" id="city" style="display:none">
+        <label for="city">Select City:</label>
+        <!-- City Dropdown (Hidden by default) -->
+            <select class="form-control" id="city" name="city">
+            </select>
+    </div>
+
+    <div class="form-check">
+        <label>Available:</label>
+        <!-- Radio Button for Availability -->
+        <input type="radio" id="available_yes" name="available" value="yes" class="form-check-input">&nbsp; Yes
+        <input type="radio" id="available_no" name="available" value="no" class="form-check-input">&nbsp; No
+    </div>
+
+    <div class="form-control">
+        <label>Available Date</label>
+        <!--Date field will be hidden-->
+        
+
+    </div>
+
 
     <div class="form-check">
         <input type="checkbox" class="form-check-input" id="exampleCheck1">
