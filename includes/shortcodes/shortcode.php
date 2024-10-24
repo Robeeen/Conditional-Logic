@@ -1,12 +1,13 @@
 <?php
 
-add_shortcode('conditional_logic_form', 'clf_conditional_logic_form');
+add_shortcode('conditional_logic', 'clf_conditional_logic_form');
 
 if( !function_exists('clf_conditional_logic_form')){
     function clf_conditional_logic_form(){
-        ob_start(); ?>
+        ob_start(); 
+        ?>
 
-<form class="class" id="conditional-form">
+<form id="conditional-form">
     <!-- Country Dropdown -->
     <div class="form-group">
         <label for="exampleInputEmail1">Email address</label>
@@ -29,5 +30,7 @@ if( !function_exists('clf_conditional_logic_form')){
 
 
 <?php
+ return ob_get_clean();
     }
+    
 }
