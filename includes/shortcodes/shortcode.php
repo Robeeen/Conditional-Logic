@@ -20,8 +20,8 @@ if( !function_exists('clf_conditional_logic_form')){
             <!-- Country Dropdown -->
             <select class="form-control" id="country" name="country">
                 <option value="">--Select Country--</option>
-                <option value="USA">USA</option>
-                <option value="Canada">Canada</option>
+                <option value="US">US</option>
+                <option value="CA">CA</option>
                 <option value="UK">UK</option>
             </select>     
     </div>    

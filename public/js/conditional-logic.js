@@ -2,11 +2,11 @@ console.log("Hi");
 
 jQuery(document).ready(function ($) {
 
-    var cities = {
-        "USA": ["New york", "Loss Angels", "Chikago"],
-        "Canada": ["Montreal", "Quebec", "Vancubar"],
-        "UK": ["London", "Manchaster", "Birmingham"]
-    };
+    // var cities = {
+    //     "USA": ["New york", "Loss Angels", "Chikago"],
+    //     "Canada": ["Montreal", "Quebec", "Vancubar"],
+    //     "UK": ["London", "Manchaster", "Birmingham"]
+    // };
     var my_cities = {
         "US": {
             "New York" : [ "Brooklyn", "Queens", "Manhattan"],
@@ -23,20 +23,39 @@ jQuery(document).ready(function ($) {
             "Manchaster": ["Salford", "Castlefield", "Ancoats"],
             "Birmingham": ["Trussville", "Leeds", "Irondale"]
         }
-    }
+    };
 
     $('#country').change(function () {
-        var selectCountry = $(this).val();
-        if (selectCountry !== "") {
-            var cityDropdown = $('#city');
-            cityDropdown.empty();// Clear existing options
 
-            $.each(cities[selectCountry], function (index, city) {
+        var selectCountry = $(this).val();
+        var cityDropdown = $('#city');
+        var subDropdown = $('#suburb');
+
+        cityDropdown.empty().hide();
+        subDropdown.empty().hide();
+
+        if (selectCountry !== "") {
+            $.each(my_cities[selectCountry], function (index, city) {
                 cityDropdown.append($('<option></option>').val(city).text(city));
+            });  
+
+            cityDropdown.show();
+        } 
+    });
+
+    $('#city').change(function() {
+        var selectCountry = $('#country');
+        var selectedCity = $(this).val();
+        var subDropdown = $('#suburb');
+
+        subDropdown.empty();
+
+        if(selectedCity !== ""){
+            $.each(my_cities[selectCountry][selectedCity], function(index, suburb){
+                subDropdown.append($('<option></option>').val(suburb.text(suburb)))
             });
-            $('#city-container').show();
-        } else {
-            $('#city-container').hide();
+
+            subDropdown.show();
         }
     });
 
