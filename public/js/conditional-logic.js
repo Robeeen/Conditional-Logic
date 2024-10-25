@@ -30,32 +30,36 @@ jQuery(document).ready(function ($) {
         var selectCountry = $(this).val();
         var cityDropdown = $('#city');
         var subDropdown = $('#suburb');
+        var cityContainer = $('#city-container');
 
         cityDropdown.empty().hide();
         subDropdown.empty().hide();
 
         if (selectCountry !== "") {
-            $.each(my_cities[selectCountry], function (index, city) {
+            $.each(my_cities[selectCountry], function (city, suburb) {
                 cityDropdown.append($('<option></option>').val(city).text(city));
             });  
 
             cityDropdown.show();
+            cityContainer.show();
         } 
     });
 
     $('#city').change(function() {
-        var selectCountry = $('#country');
+        var selectCountry = $('#country').val();
         var selectedCity = $(this).val();
         var subDropdown = $('#suburb');
+        var sububContainer = $('#suburb-container');
 
         subDropdown.empty();
 
         if(selectedCity !== ""){
             $.each(my_cities[selectCountry][selectedCity], function(index, suburb){
-                subDropdown.append($('<option></option>').val(suburb.text(suburb)))
+                subDropdown.append($('<option></option>').val(suburb).text(suburb))
             });
 
             subDropdown.show();
+            sububContainer.show();
         }
     });
 

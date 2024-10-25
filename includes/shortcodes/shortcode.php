@@ -28,13 +28,13 @@ if( !function_exists('clf_conditional_logic_form')){
     <div class="form-group" id="city-container" style="display:none">
         <label for="city">Select City:</label>
         <!-- City Dropdown (Hidden by default) -->
-            <select class="form-control" id="city" name="city">
+            <select class="form-control" id="city" name="city" style="display:none;">
             </select>
     </div>
     <div class="form-group" id="suburb-container" style="display:none">
         <label for="suburb">Select Suburbs:</label>
         <!-- Suburb Dropdown (Hidden by default) -->
-            <select class="form-control" id="suburb" name="suburb">
+            <select class="form-control" id="suburb" name="suburb" style="display:none;">
             </select>
     </div>
     <div class="form-check">
