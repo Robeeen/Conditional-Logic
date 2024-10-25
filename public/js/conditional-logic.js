@@ -16,7 +16,12 @@ jQuery(document).ready(function ($) {
         "CA": {
             "Quebec" : ["Ahuntsic", "Nouveau-Bordeaux", "Cartierville"],
             "Vancouver": ["Kitsilano", "West End", "Stanley Park"],
-            ""
+            "Ottawa" : ["Parliament Hill", "Metcalfe", "Fallowfield"]
+        },
+        "UK": {
+            "London": ["Acton", "Barnes", "Greenwich"],
+            "Manchaster": ["Salford", "Castlefield", "Ancoats"],
+            "Birmingham": ["Trussville", "Leeds", "Irondale"]
         }
     }
 
