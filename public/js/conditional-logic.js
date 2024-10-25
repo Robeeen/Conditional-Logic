@@ -7,6 +7,7 @@ jQuery(document).ready(function ($) {
     //     "Canada": ["Montreal", "Quebec", "Vancubar"],
     //     "UK": ["London", "Manchaster", "Birmingham"]
     // };
+
     var my_cities = {
         "US": {
             "New York" : [ "Brooklyn", "Queens", "Manhattan"],
@@ -31,9 +32,10 @@ jQuery(document).ready(function ($) {
         var cityDropdown = $('#city');
         var subDropdown = $('#suburb');
         var cityContainer = $('#city-container');
-
+        var sububContainer = $('#suburb-container');
         cityDropdown.empty().hide();
         subDropdown.empty().hide();
+        
 
         if (selectCountry !== "") {
             $.each(my_cities[selectCountry], function (city, suburb) {
@@ -42,7 +44,12 @@ jQuery(document).ready(function ($) {
 
             cityDropdown.show();
             cityContainer.show();
-        } 
+
+        }else{
+            cityContainer.hide();
+            sububContainer.hide();
+            subDropdown.hide();
+        }
     });
 
     $('#city').change(function() {
@@ -51,8 +58,8 @@ jQuery(document).ready(function ($) {
         var subDropdown = $('#suburb');
         var sububContainer = $('#suburb-container');
 
-        subDropdown.empty();
-
+        subDropdown.empty().hide();
+        sububContainer.hide();
         if(selectedCity !== ""){
             $.each(my_cities[selectCountry][selectedCity], function(index, suburb){
                 subDropdown.append($('<option></option>').val(suburb).text(suburb))
@@ -60,6 +67,9 @@ jQuery(document).ready(function ($) {
 
             subDropdown.show();
             sububContainer.show();
+        }else{
+            subDropdown.hide();
+            sububContainer.hide();
         }
     });
 
