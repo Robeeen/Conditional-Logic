@@ -31,6 +31,12 @@ if( !function_exists('clf_conditional_logic_form')){
             <select class="form-control" id="city" name="city">
             </select>
     </div>
+    <div class="form-group" id="suburb-container" style="display:none">
+        <label for="suburb">Select Suburbs:</label>
+        <!-- Suburb Dropdown (Hidden by default) -->
+            <select class="form-control" id="suburb" name="suburb">
+            </select>
+    </div>
     <div class="form-check">
         <label>Available:</label>
         <!-- Radio Button for Availability -->
@@ -54,6 +60,5 @@ if( !function_exists('clf_conditional_logic_form')){
 
 <?php
  return ob_get_clean();
-    }
-    
+    }    
 }
