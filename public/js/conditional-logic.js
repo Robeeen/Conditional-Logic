@@ -7,6 +7,18 @@ jQuery(document).ready(function ($) {
         "Canada": ["Montreal", "Quebec", "Vancubar"],
         "UK": ["London", "Manchaster", "Birmingham"]
     };
+    var my_cities = {
+        "US": {
+            "New York" : [ "Brooklyn", "Queens", "Manhattan"],
+            "New Jersey" : ["Middlesex", "Morris", "Sussex"],
+            "California" : ["Stockton", "Modesto", "Merced"]
+        },
+        "CA": {
+            "Quebec" : ["Ahuntsic", "Nouveau-Bordeaux", "Cartierville"],
+            "Vancouver": ["Kitsilano", "West End", "Stanley Park"],
+            ""
+        }
+    }
 
     $('#country').change(function () {
         var selectCountry = $(this).val();
