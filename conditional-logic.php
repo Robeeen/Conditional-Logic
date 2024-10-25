@@ -6,9 +6,8 @@ Version: 1.0
 Author: Shams Khan
 */
 
-
  // If this file is called directly, abort.
- if ( ! defined( 'WPINC' ) ) {
+if ( ! defined( 'WPINC' ) ) {
 	die;
 }
 
@@ -19,4 +18,6 @@ define( 'PLUGIN_NAME_VERSION', '1.0.0' );
 define( 'MY_PLUGIN_PATH', plugin_dir_path( __FILE__ ) );
 include( MY_PLUGIN_PATH . 'includes/enqueue_scripts/enque_files.php');
 include( MY_PLUGIN_PATH . 'includes/shortcodes/shortcode.php');
-//
+
+//uninstalling
+
